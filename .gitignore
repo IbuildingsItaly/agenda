@@ -1,0 +1,4 @@
+.idea
+touch
+resources/sass/.sass_cache
+build
