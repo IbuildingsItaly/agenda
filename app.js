@@ -18,6 +18,8 @@ Ext.application({
     ],
 
     views: [
+        'Contact',
+        'ContactList',
         'Main'
     ],
 
