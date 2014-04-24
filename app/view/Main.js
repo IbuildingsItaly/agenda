@@ -12,6 +12,7 @@ Ext.define('Agenda.view.Main', {
 
         items: [{
             title: 'Agenda',
+            id: 'agenda',
             iconCls: 'home',
             layout: {
                 type: 'vbox',
@@ -26,7 +27,7 @@ Ext.define('Agenda.view.Main', {
                 xtype: 'contactList'
             }]
         } , {
-            title: 'Add Contact',
+            title: 'Contact',
             iconCls: 'action',
             layout: {
                 type: 'vbox',
@@ -38,10 +39,7 @@ Ext.define('Agenda.view.Main', {
                 xtype: 'titlebar',
                 title: 'Contact'
             } , {
-                xtype: 'contact'
-            } , {
-                xtype: 'button',
-                text: 'Add Contact'
+                xtype: 'contactform'
             }]
         }]
     }
