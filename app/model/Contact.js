@@ -19,10 +19,6 @@ Ext.define('Agenda.model.Contact', {
         } , {
             name: 'website',
             type: 'string'
-        }],
-        proxy: {
-            type: 'localstorage',
-            id: 'agenda'
-        }
+        }]
     }
 });
