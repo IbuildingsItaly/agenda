@@ -50,11 +50,11 @@ Ext.define('Agenda.controller.Contact', {
     updateContact: function (btn) {
         var me = this,
             form = me.getContactForm(),
+            values = form.getValues(),
             store = Ext.getStore('contactList'),
             record = store.getById(form.getRecord().getId());
 
-        store.remove(record);
-        store.add(form.getValues());
+        record.set(values);
 
         me._resetContactForm();
     },
