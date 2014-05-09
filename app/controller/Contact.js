@@ -1,3 +1,6 @@
+/**
+ * Controller of the Contact form
+ */
 Ext.define('Agenda.controller.Contact', {
     extend: 'Ext.app.Controller',
 
@@ -23,7 +26,10 @@ Ext.define('Agenda.controller.Contact', {
         }
     },
 
-    addContact: function (btn) {
+    /**
+     * Add a new contact to the contact list
+     */
+    addContact: function () {
         var me = this,
             form = me.getContactForm(),
             store = Ext.getStore('contactList');
@@ -33,7 +39,10 @@ Ext.define('Agenda.controller.Contact', {
         me._resetContactForm();
     },
 
-    deleteContact: function (btn) {
+    /**
+     * Remove an existing contact form the list
+     */
+    deleteContact: function () {
         var me = this;
 
         Ext.Msg.confirm('Confirm', 'Are you sure to delete this contact?', function (buttonId) {
@@ -47,7 +56,10 @@ Ext.define('Agenda.controller.Contact', {
         );
     },
 
-    updateContact: function (btn) {
+    /**
+     * Update an existing contact
+     */
+    updateContact: function () {
         var me = this,
             form = me.getContactForm(),
             values = form.getValues(),
@@ -59,6 +71,10 @@ Ext.define('Agenda.controller.Contact', {
         me._resetContactForm();
     },
 
+    /**
+     * Reset the form to the default state
+     * @private
+     */
     _resetContactForm: function () {
         var me = this;
 

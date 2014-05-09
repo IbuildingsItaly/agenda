@@ -1,3 +1,6 @@
+/**
+ * Contact form
+ */
 Ext.define('Agenda.view.Contact', {
     extend: 'Ext.form.Panel',
     xtype: 'contactform',

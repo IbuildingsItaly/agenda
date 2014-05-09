@@ -1,3 +1,6 @@
+/**
+ * Store for the contact list
+ */
 Ext.define('Agenda.store.ContactList', {
     extend: 'Ext.data.Store',
     requires: ['Ext.data.proxy.LocalStorage'],

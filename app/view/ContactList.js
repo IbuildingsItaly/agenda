@@ -1,3 +1,6 @@
+/**
+ * Contact list
+ */
 Ext.define('Agenda.view.ContactList', {
     extend: 'Ext.dataview.List',
     xtype: 'contactList',

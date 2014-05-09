@@ -1,3 +1,6 @@
+/**
+ * Main page
+ */
 Ext.define('Agenda.view.Main', {
     extend: 'Ext.tab.Panel',
     xtype: 'main',

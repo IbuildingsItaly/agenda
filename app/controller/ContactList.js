@@ -1,3 +1,6 @@
+/**
+ * Contact list controller
+ */
 Ext.define('Agenda.controller.ContactList', {
     extend: 'Ext.app.Controller',
 
@@ -19,6 +22,13 @@ Ext.define('Agenda.controller.ContactList', {
         }
     },
 
+    /**
+     * Load a selected user from the contact list to the contact form
+     * @param contactList The contact list
+     * @param index The contact index in the contact list
+     * @param el The Ext.Element
+     * @param record The contact model instance
+     */
     prepareUser: function (contactList, index, el, record) {
         var me = this;
 
@@ -28,6 +38,9 @@ Ext.define('Agenda.controller.ContactList', {
         me.getMainPanel().setActiveItem(1);
     },
 
+    /**
+     * Reset contact form
+     */
     resetContactForm: function () {
         var me = this;
 

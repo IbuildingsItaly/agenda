@@ -1,3 +1,6 @@
+/**
+ * Model of a single contact
+ */
 Ext.define('Agenda.model.Contact', {
     extend: 'Ext.data.Model',
     config: {
