@@ -10,7 +10,7 @@ First of all, clone the repo:
 $ git clone https://github.com/IbuildingsItaly/agenda
 ```
 
-Then make a copy of SenchaTouch#2.3.1 created with Sencha Cmd and move it in the application folder (path/to/Agenda), under the name *touch*.
+Then make a copy of [**SenchaTouch#2.3.1**](http://www.sencha.com/products/touch/download/sencha-touch-2.3.1a/3069) created with Sencha Cmd and move it in the application folder (path/to/Agenda), under the name *touch*.
 If you don't have any copy, generate it:
 
 ```bash
