@@ -11,7 +11,11 @@ Ext.define('Agenda.controller.Contact', {
             insertContactBtn: 'button[name=insertContact]',
             deleteContactBtn: 'button[name=deleteContact]',
             updateContactBtn: 'button[name=updateContact]',
-            buttonContainer: 'container[name=buttonContainer]'
+            buttonContainer: 'container[name=buttonContainer]',
+            takePicBtn: 'button[name=takePic]',
+            imagePic: 'image[name=pic]',
+            avatarField: 'hiddenfield[name=avatar]',
+            previewField: 'image[name=preview]'
         },
         control: {
             insertContactBtn: {
@@ -22,8 +26,32 @@ Ext.define('Agenda.controller.Contact', {
             },
             updateContactBtn: {
                 tap: 'updateContact'
+            },
+            takePicBtn: {
+                tap: 'takePicture'
             }
         }
+    },
+
+    /**
+     * Take a picture from device camera
+     */
+    takePicture: function () {
+        var me = this;
+
+        Ext.device.Camera.capture({
+            success: function (image) {
+                me.getPreviewField().setSrc(image);
+                me.getAvatarField().setValue(image);
+            },
+            failure: function (error) {
+                Ext.Msg.alert('Error', error);
+            },
+            quality: 100,
+            width: 200,
+            height: 200,
+            destination: 'file'
+        });
     },
 
     /**
@@ -80,6 +108,7 @@ Ext.define('Agenda.controller.Contact', {
 
         me.getMainPanel().setActiveItem(0);
         me.getContactForm().reset();
+        me.getPreviewField().setSrc('./resources/images/pic.png');
         me.getButtonContainer().hide();
         me.getInsertContactBtn().show();
     }
