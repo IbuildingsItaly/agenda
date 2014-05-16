@@ -7,3 +7,4 @@ build
 cordova
 cordova.local.properties
 .sencha/app/cordova-impl.xml
+server/config.js
