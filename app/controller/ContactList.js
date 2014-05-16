@@ -10,7 +10,8 @@ Ext.define('Agenda.controller.ContactList', {
             mainPanel: 'main',
             contactForm: 'contactform',
             buttonContainer: 'container[name=buttonContainer]',
-            insertContactBtn: 'button[name=insertContact]'
+            insertContactBtn: 'button[name=insertContact]',
+            previewField: 'image[name=preview]'
         },
         control: {
             contactList: {
@@ -33,6 +34,7 @@ Ext.define('Agenda.controller.ContactList', {
         var me = this;
 
         me.getContactForm().setRecord(record);
+        me.getPreviewField().setSrc(record.get('avatar'));
         me.getButtonContainer().show();
         me.getInsertContactBtn().hide();
         me.getMainPanel().setActiveItem(1);
@@ -45,6 +47,7 @@ Ext.define('Agenda.controller.ContactList', {
         var me = this;
 
         if (me.getMainPanel().getActiveItem().getId() !== 'agenda') {
+            me.getPreviewField().setSrc('./resources/images/pic.png');
             me.getContactForm().reset();
             me.getButtonContainer().hide();
             me.getInsertContactBtn().show();
