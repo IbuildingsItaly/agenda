@@ -1,4 +1,9 @@
 .idea
 touch
 resources/sass/.sass_cache
+resources/sass/.sass-cache
+server/node_modules
 build
+cordova
+cordova.local.properties
+.sencha/app/cordova-impl.xml
