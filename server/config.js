@@ -1,3 +1,4 @@
-/**
- * Created by wilk on 16/05/14.
- */
+module.exports = {
+    apiKey: '<GCM API KEY>',
+    deviceKey: '<DEVICE ID>'
+};
