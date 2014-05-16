@@ -4,12 +4,29 @@
 Ext.define('Agenda.view.Contact', {
     extend: 'Ext.form.Panel',
     xtype: 'contactform',
-    requires: ['Ext.field.Email'],
+    requires: ['Ext.field.Email', 'Ext.field.Hidden', 'Ext.Img'],
 
     config: {
         flex: 1,
         record: 'Agenda.model.Contact',
         items: [{
+            xtype: 'button',
+            name: 'takePic',
+            flex: 1,
+            text: 'Take a picture',
+            ui: 'confirm-round',
+            margin: '10 10 10 10'
+        } , {
+            xtype: 'hiddenfield',
+            name: 'avatar',
+            value: ''
+        } , {
+            xtype: 'image',
+            name: 'preview',
+            flex: 1,
+            height: 200,
+            src: './resources/images/pic.png'
+        } , {
             xtype: 'textfield',
             name: 'name',
             label: 'Name'
