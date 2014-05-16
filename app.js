@@ -36,6 +36,10 @@ Ext.application({
         'ContactList'
     ],
 
+    profiles: [
+        'Device'
+    ],
+
     icon: {
         '57': 'resources/icons/Icon.png',
         '72': 'resources/icons/Icon~ipad.png',
