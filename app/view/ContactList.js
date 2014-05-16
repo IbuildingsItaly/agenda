@@ -10,11 +10,14 @@ Ext.define('Agenda.view.ContactList', {
         deferEmptyText: false,
         store: 'contactList',
         itemTpl: [
-            '<div>',
-                '<p>{name} {surname}</p>',
-                '<p>Address: {address}</p>',
-                '<p>Email: {email}</p>',
-                '<p>Website: {website}</p>',
+            '<div style="display: inline-block;">',
+                '<img src="{avatar}" width="200" height="200" style="margin: 0 10px;"/>',
+                '<div style="display: inline-block; vertical-align: top">',
+                    '<p>{name} {surname}</p>',
+                    '<p>Address: {address}</p>',
+                    '<p>Email: {email}</p>',
+                    '<p>Website: {website}</p>',
+                '</div>',
             '</div>'
         ].join('')
     }
