@@ -1,9 +1,9 @@
 var fs = require('fs'),
     config = require('./config'),
     GCM = require('gcm').GCM,
-    gcm = new GCM(config.apiKey),
+    gcm = new GCM(config.APPLICATION_ID),
     message = {
-        registration_id: config.deviceKey,
+        registration_id: config.REGISTRATION_ID,
         'data.message': 'New user incoming!'
     };
 
