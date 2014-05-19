@@ -1,7 +1,7 @@
 Ext.define('Agenda.profile.Device', {
     extend: 'Ext.app.Profile',
 
-    DEVICE_SENDER_ID: 'GCM_PROJECT_NUMBER',
+    SENDER_ID: 'YOUR_GCM_PROJECT_ID',
 
     isActive: function () {
         return Ext.os.is.Tablet || Ext.os.is.Phone;
@@ -16,7 +16,7 @@ Ext.define('Agenda.profile.Device', {
     onNotificationsReceived: function (notifications) {
         switch (notifications.event) {
             case 'registered':
-                if(notifications.regid.length > 0) {
+                if (notifications.regid.length > 0) {
                     //Ext.Msg.alert('NOTIFICATION :: REGISTERED', notifications.regid);
                 }
                 break;
@@ -39,7 +39,7 @@ Ext.define('Agenda.profile.Device', {
 
         Ext.device.Push.register({
             type: Ext.device.Push.ALERT | Ext.device.Push.BADGE | Ext.device.Push.SOUND,
-            senderID: me.DEVICE_SENDER_ID,
+            senderID: me.SENDER_ID,
             success: me.onRegisterSuccess,
             failure: me.onRegisterFailure,
             received: me.onNotificationsReceived
