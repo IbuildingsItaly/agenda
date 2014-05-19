@@ -71,7 +71,9 @@ $ sencha app build
 A new folder called *production* is created under *build*: here you can find the production build of Agenda, ready to use.
 
 ### Native
-If you want to make a build for mobile devices (phone, tablet and so on), then launch the following command from the root of Agenda:
+For native builds, the [**Android SDK**](http://developer.android.com/sdk/index.html) is needed. So, download and install it firstly.
+
+Now, if you want to make a build for mobile devices (phone, tablet and so on), then launch the following command from the root of Agenda:
 
 ```bash
 $ cd /path/to/Agenda
